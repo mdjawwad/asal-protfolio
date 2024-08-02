@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
+.button-container-2 {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7vh;
+  overflow: hidden;
+
+  transition: 0.5s;
+
+  width: 25rem;
+  color: #f5f5f7;
+  border: #f5f5f7 solid 1px;
+
+  height: 5rem;
+  background-color: transparent;
+
+  border-radius: 80px;
+  font-family: "Alata", sans-serif;
+
+  button {
+    width: 25rem;
+    border-radius: 80px;
+    height: 5rem;
+    font-size: 2.2rem;
+
+    letter-spacing: -1px;
+
+    @include button(
+      #f5f5f7,
+      "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+      3000%,
+      100%,
+      none,
+      #000000
+    );
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(29) forwards;
+    animation: ani2 0.7s steps(29) forwards;
+
+    &:hover {
+      -webkit-animation: ani 0.7s steps(29) forwards;
+      animation: ani 0.7s steps(29) forwards;
+    }
+  }
+}
+
+.mas {
+  position: absolute;
+  color: #f5f5f7;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: "Alata", sans-serif;
+
+  letter-spacing: -1px;
+
+  width: 101%;
+
+  position: absolute;
+
+  margin-top: 17px;
+  overflow: hidden;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+a {
+  color: #00ff95;
+}
+
+@media screen and (max-width: 320px) {
+  .button-container-2 {
+    width: 15rem;
+    height: 50px;
+
+    margin-top: 0;
+
+    button {
+      width: 15rem;
+
+      height: 50px;
+      font-size: 1rem;
+
+      letter-spacing: -1px;
+    }
+  }
+
+  .mas {
+    font-size: 1rem;
+    letter-spacing: -1px;
+   
+    overflow: hidden;
+    height: 50px;
+  }
+}
+
+
+// @media screen and (max-width: 640px) {
+//   .button-container-2 {
+//     width: 7rem;
+//     height: 45px;
+
+//     margin-top: 0;
+
+//     button {
+//       width: 7rem;
+
+//       height: 45px;
+//       font-size: 1rem;
+
+//       letter-spacing: -1px;
+//     }
+//   }
+
+//   .mas {
+//     font-size: 1rem;
+//     letter-spacing: -1px;
+   
+//     overflow: hidden;
+//     height: 45px;
+//   }
+// }

@@ -1,1 +1,198 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background: #0111bf !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+canvas {
+  position: absolute;
+  opacity: 0.1;
+  z-index: 1;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f5f5f7;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+body.dark-mode canvas {
+  opacity: 0.1;
+}
+body.dark-mode body {
+  background-color: hwb(0 11% 88%) !important;
+}
+
+body.dark-mode .container {
+  background-color: hwb(0 11% 88%) !important;
+}
+body.dark-mode .dark-mode-btn{
+  background: white;
+  border-radius: 50%;
+}
+
+
+@keyframes title-anim { 
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes text-slide-left {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+
+    transform: translateX(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
+@keyframes text-slide-right {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+
+    transform: translateX(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+ 
