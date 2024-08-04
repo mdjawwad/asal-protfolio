@@ -6,7 +6,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { CommonModule } from '@angular/common';
 import { LoadingComponent } from './component/loading/loading.component';
 import { SkillsComponent } from './component/skills/skills.component';
-import AOS from 'aos';
+import * as AOS from 'aos';
  
 import { CustomCursorComponent } from './component/custom-cursor/custom-cursor.component';
 import { NoiseBackgroundService } from './service/noise-bg/noise-background.service';
