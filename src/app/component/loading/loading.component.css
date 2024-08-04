@@ -25,7 +25,7 @@ body {
     left: -2.5em;
     background-color: #ffd455;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    animation: sizzle 1s infinite linear, eggyolk 4s infinite ease-in-out;
+    animation: sizzle 1s infinite linear, eggyolk 3s infinite ease-in-out;
     --y-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
     --y-rotate: 360deg;
     --radius100-0: 50% 50% 40% 60% / 60% 40% 50% 60%;
@@ -44,7 +44,7 @@ body {
     left: -3.5em;
     border-radius: 60% 60% 60% 60% / 80% 80% 40% 40%;
     background-color: #ffffff;
-    animation: eggwhite 6s infinite ease-in-out;
+    animation: eggwhite 5s infinite ease-in-out;
     --w-width: 8em;
     --w-height: 8em;
     --w-top: -4em;
@@ -63,7 +63,7 @@ body {
     --radius75: 60% 60% 50% 50% / 50% 50% 60% 50%;
     --radius50: 50% 50% 70% 40% / 60% 70% 50% 60%;
     --radius25: 60% 40% 50% 50% / 50% 50% 40% 50%;
-    animation: sizzle 1s infinite linear, scale 8s infinite ease-in-out;
+    animation: sizzle 1s infinite linear, scale 6s infinite ease-in-out;
   }
   .white-sizzle2 {
     rotate: -90deg;

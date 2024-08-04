@@ -1,44 +1,40 @@
-.contact-container{
-    margin-top: 5rem;
-    border-top: #f5f5f7 solid 1px;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-    width: 95vw;
+.contact-container {
+  margin-top: 5rem;
+  border-top: #f5f5f7 solid 1px;
+
+  text-align: center;
+  overflow: hidden;
+  width: 95vw;
 }
 .btn-container {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 30vh;
-    margin-bottom: 4rem;
-  }
-  
-   
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 
-  .contact-container span{
-font-size: 14.5rem;
+  margin-bottom: 4rem;
+}
 
+.contact-container span {
+  font-size: 14.5rem;
+}
 
-  }
-
-  .contact-container .contact-text img {
+.contact-container .contact-text img {
   overflow: hidden;
   width: fit-content;
   width: 90rem;
   animation: title-anim 1s ease 0s 1 normal forwards;
 }
 
-.contact-text p{
- padding: 0 1rem;
+.contact-text p {
+  padding: 0 1rem;
   margin-top: 1rem;
-  color:#b7bbef;
- text-align: center;
- font-size: 2rem;
- letter-spacing: 1px;
- font-weight: 600;
-font-family: "Alata", sans-serif;
+  color: #b7bbef;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Alata", sans-serif;
 }
 
 .footer-btn {
@@ -55,35 +51,49 @@ font-family: "Alata", sans-serif;
   border-radius: 80px;
   font-family: "Alata", sans-serif;
 }
+.footer-btn a{
+  text-decoration: none;
+  color:black ;
+}
 .footer-btn:hover {
-  box-shadow: inset 0 3em 0em 0em #000000 ;
+  box-shadow: inset 0 3em 0em 0em #000000;
   border: #f5f5f7 solid 1px;
   color: #f5f5f7;
+  a{
+  color:#f5f5f7 ;
+
+  }
 }
 
-
-
-
-
-@media screen and (max-width : 320px) {
-  .contact-container{
+@media screen and (max-width: 650px) {
+  .contact-container {
     margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .btn-container{
+
+  .btn-container {
+    margin-top: 2rem !important;
+    justify-content: none;
+
     flex-direction: column;
   }
-  .contact-text img{
+  .btn-container a {
+    margin: 0;
+    background-color: rgb(13, 15, 15);
+    padding: 0;
+    height: 3rem !important;
+  }
+  .contact-text img {
     width: 18rem !important;
-  } 
-  .contact-text p{
+  }
+  .contact-text p {
     font-size: 1.2rem;
     line-height: 2rem;
   }
-  .footer-btn{
+  .footer-btn {
     width: 130px;
     font-size: 1rem;
     height: 45px;

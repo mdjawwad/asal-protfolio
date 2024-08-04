@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-sshh',
@@ -7,37 +9,30 @@ import { Component } from '@angular/core';
   templateUrl: './sshh.component.html',
   styleUrl: './sshh.component.css'
 })
-export class SshhComponent {
-
-  ngOnInit(): void {
-
+export class SshhComponent implements AfterViewInit {
  
-    'use strict';
+constructor(){
+    
+  gsap.registerPlugin(ScrollTrigger);
+}
+ngAfterViewInit(): void {
 
-    // Adding scroll event listener
-    document.addEventListener('scroll', horizontalScroll);
 
-    //Selecting Elements
-    let sticky  = document.querySelector('.sticky' ) as HTMLElement;
-    let stickyParent: HTMLElement | null =
-      document.querySelector('.sticky-parent');
-
-    let scrollWidth: number = sticky?.scrollWidth || 0;
-    let verticalScrollHeight: number =
-      (stickyParent?.getBoundingClientRect().height || 0) -
-      (sticky?.getBoundingClientRect().height || 0);
-
-    //Scroll function
-    function horizontalScroll(): void {
-      //Checking whether the sticky element has entered into view or not
-      let stickyPosition: number = sticky?.getBoundingClientRect().top || 0;
-      if (stickyPosition > 1) {
-        return;
-      } else {
-        let scrolled: number = stickyParent?.getBoundingClientRect().top || 0; //how much is scrolled?
-        sticky.scrollLeft = (scrollWidth / verticalScrollHeight) * -scrolled * 0.95;
-      }
+  
+  gsap.to(".c1 h1", {
+    duration: 1,
+    ease: "expo.in",
+    transform: "translateX(-100%)",
+    scrollTrigger: {
+      trigger: ".c1",
+      scroller: "body",
+      markers: true,
+      start: "top 0%",
+      end: "top -150%",
+      scrub: 2,
+      pin: true
     }
-  }
+  });
+}
 
 }

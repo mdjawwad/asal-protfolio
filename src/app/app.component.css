@@ -7,15 +7,22 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
 }
 
 #loading-container.hidden {
   opacity: 0;
   pointer-events: none;
 }
- 
+
 #content {
   display: none;
+  opacity: 2;
+
+}
+
+@media screen and (max-width: 650px) {
+  #content {
+    width: 100% !important;
+  }
 }
