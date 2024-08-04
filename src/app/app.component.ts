@@ -7,9 +7,8 @@ import { CommonModule } from '@angular/common';
 import { LoadingComponent } from './component/loading/loading.component';
 import { SkillsComponent } from './component/skills/skills.component';
 import AOS from 'aos';
-import { SshhComponent } from './component/sshh/sshh.component';
+ 
 import { CustomCursorComponent } from './component/custom-cursor/custom-cursor.component';
-import { CustomBgComponent } from './component/custom-bg/custom-bg.component';
 import { NoiseBackgroundService } from './service/noise-bg/noise-background.service';
 
 @Component({
@@ -21,11 +20,11 @@ import { NoiseBackgroundService } from './service/noise-bg/noise-background.serv
     SkillsComponent,
     ContactComponent,
     CustomCursorComponent,
-    CustomBgComponent,
+  
     CommonModule,
     LoadingComponent,
     LandingComponent,
-    SshhComponent,
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

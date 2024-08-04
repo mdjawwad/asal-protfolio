@@ -1,144 +1,151 @@
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  color: #f5f5f7;
+  position: absolute;
+  font-family: "Alata", sans-serif;
+  top: 65%;
+  letter-spacing: 5px;
+  font-weight: lighter;
+  font-size: 2rem;
+  left: 45%;
+}
+.egg {
+  position: relative;
+}
+.yolk {
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  top: -1em;
+  left: -2.5em;
+  background-color: #ffd455;
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  animation: sizzle 1s infinite linear, eggyolk 3s infinite ease-in-out;
+  --y-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  --y-rotate: 360deg;
+  --radius100-0: 50% 50% 40% 60% / 60% 40% 50% 60%;
+  --radius75: 60% 60% 50% 50% / 50% 50% 60% 50%;
+  --radius50: 50% 50% 70% 40% / 60% 70% 50% 60%;
+  --radius25: 60% 40% 50% 50% / 50% 50% 40% 50%;
+}
+.yolk-sizzle {
+  rotate: -90deg;
+}
+.white {
+  position: absolute;
+  width: 7em;
+  height: 10em;
+  top: -5em;
+  left: -3.5em;
+  border-radius: 60% 60% 60% 60% / 80% 80% 40% 40%;
+  background-color: #ffffff;
+  animation: eggwhite 5s infinite ease-in-out;
+  --w-width: 8em;
+  --w-height: 8em;
+  --w-top: -4em;
+  --w-left: -4em;
+  --w-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  --w-rotate: 360deg;
+}
+.white-sizzle {
+  position: absolute;
+  top: -4em;
+  left: -4em;
+  width: 8em;
+  height: 8em;
+  background-color: #ffffff;
+  --radius100-0: 50% 50% 40% 60% / 60% 40% 50% 60%;
+  --radius75: 60% 60% 50% 50% / 50% 50% 60% 50%;
+  --radius50: 50% 50% 70% 40% / 60% 70% 50% 60%;
+  --radius25: 60% 40% 50% 50% / 50% 50% 40% 50%;
+  animation: sizzle 1s infinite linear, scale 6s infinite ease-in-out;
+}
+.white-sizzle2 {
+  rotate: -90deg;
+}
+.white-sizzle3 {
+  rotate: 90deg;
+}
+.white-sizzle4 {
+  rotate: 270deg;
+}
+@keyframes scale {
+  100% {
+    scale: 0%;
   }
-  .loading{
-    color: #f5f5f7;
-    position: absolute;
-    font-family: "Alata", sans-serif;
-    top: 28rem;
-    letter-spacing: 5px;
-    font-weight: lighter;
-    font-size: 2rem;
-    left: 43rem;
+  80% {
+    scale: 90%;
   }
-  .egg {
-    position: relative;
+  50% {
+    scale: 100%;
   }
-  .yolk {
-    position: absolute;
-    width: 5em;
-    height: 5em;
-    top: -1em;
+  20% {
+    scale: 90%;
+  }
+  0% {
+    scale: 0%;
+  }
+}
+@keyframes sizzle {
+  100% {
+    border-radius: var(--radius100-0);
+  }
+  75% {
+    border-radius: var(--radius75);
+  }
+  50% {
+    border-radius: var(--radius50);
+  }
+  25% {
+    border-radius: var(--radius25);
+  }
+  0% {
+    border-radius: var(--radius100-0);
+  }
+}
+@keyframes eggwhite {
+  100% {
+    rotate: var(--w-rotate);
+  }
+  50% {
+    width: var(--w-width);
+    height: var(--w-height);
+    border-radius: var(--w-radius);
+    top: var(--w-top);
+    left: var(--w-left);
+  }
+}
+@keyframes eggyolk {
+  100% {
+    top: -0.25em;
+    scale: 0;
+  }
+  75% {
+    left: -1.5em;
+  }
+  50% {
+    top: -2.5em;
     left: -2.5em;
-    background-color: #ffd455;
-    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    animation: sizzle 1s infinite linear, eggyolk 3s infinite ease-in-out;
-    --y-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    --y-rotate: 360deg;
-    --radius100-0: 50% 50% 40% 60% / 60% 40% 50% 60%;
-    --radius75: 60% 60% 50% 50% / 50% 50% 60% 50%;
-    --radius50: 50% 50% 70% 40% / 60% 70% 50% 60%;
-    --radius25: 60% 40% 50% 50% / 50% 50% 40% 50%;
+    scale: 80%;
   }
-  .yolk-sizzle {
-    rotate: -90deg;
-  }
-  .white {
-    position: absolute;
-    width: 7em;
-    height: 10em;
-    top: -5em;
+  25% {
     left: -3.5em;
-    border-radius: 60% 60% 60% 60% / 80% 80% 40% 40%;
-    background-color: #ffffff;
-    animation: eggwhite 5s infinite ease-in-out;
-    --w-width: 8em;
-    --w-height: 8em;
-    --w-top: -4em;
-    --w-left: -4em;
-    --w-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    --w-rotate: 360deg;
   }
-  .white-sizzle {
-    position: absolute;
-    top: -4em;
-    left: -4em;
-    width: 8em;
-    height: 8em;
-    background-color: #ffffff;
-    --radius100-0: 50% 50% 40% 60% / 60% 40% 50% 60%;
-    --radius75: 60% 60% 50% 50% / 50% 50% 60% 50%;
-    --radius50: 50% 50% 70% 40% / 60% 70% 50% 60%;
-    --radius25: 60% 40% 50% 50% / 50% 50% 40% 50%;
-    animation: sizzle 1s infinite linear, scale 6s infinite ease-in-out;
+  0% {
+    top: -0.25em;
+    scale: 0;
   }
-  .white-sizzle2 {
-    rotate: -90deg;
+}
+@media screen and (max-width: 650px) {
+  .loading {
+    top: 60%;
+
+    font-size: 1.5rem;
+    left: 35%;
   }
-  .white-sizzle3 {
-    rotate: 90deg;
-  }
-  .white-sizzle4 {
-    rotate: 270deg;
-  }
-  @keyframes scale {
-    100% {
-      scale: 0%;
-    }
-    80% {
-      scale: 90%;
-    }
-    50% {
-      scale: 100%;
-    }
-    20% {
-      scale: 90%;
-    }
-    0% {
-      scale: 0%;
-    }
-  }
-  @keyframes sizzle {
-    100% {
-      border-radius: var(--radius100-0);
-    }
-    75% {
-      border-radius: var(--radius75);
-    }
-    50% {
-      border-radius: var(--radius50);
-    }
-    25% {
-      border-radius: var(--radius25);
-    }
-    0% {
-      border-radius: var(--radius100-0);
-    }
-  }
-  @keyframes eggwhite {
-    100% {
-      rotate: var(--w-rotate);
-    }
-    50% {
-      width: var(--w-width);
-      height: var(--w-height);
-      border-radius: var(--w-radius);
-      top: var(--w-top);
-      left: var(--w-left);
-    }
-  }
-  @keyframes eggyolk {
-    100% {
-      top: -0.25em;
-      scale: 0;
-    }
-    75% {
-      left: -1.5em;
-    }
-    50% {
-      top: -2.5em;
-      left: -2.5em;
-      scale: 80%;
-    }
-    25% {
-      left: -3.5em;
-    }
-    0% {
-      top: -0.25em;
-      scale: 0;
-    }
-  }
-  
+}
