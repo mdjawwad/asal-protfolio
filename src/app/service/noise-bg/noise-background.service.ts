@@ -50,7 +50,7 @@ export class NoiseBackgroundService {
     const length = buffer32.length;
 
     for (let i = 0; i < length; i++) {
-      buffer32[i] = Math.random() < 0.5 ? 0xffffffff : 0;
+      buffer32[i] = Math.random() < 0.8 ? 0xffffffff : 0;
     }
 
     this.ctx.putImageData(imageData, 0, 0);
